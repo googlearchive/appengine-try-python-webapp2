@@ -15,6 +15,8 @@ See the README file for directions. You'll need python 2.7 and [pip 1.4 or later
 
    ```
    git clone https://github.com/GoogleCloudPlatform/appengine-python-webapp2-skeleton.git
+   ```
+
 3. Run this project locally from the command line:
 
    ```
