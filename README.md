@@ -31,7 +31,7 @@ for options when running dev_appserver.
 ## Deploy
 To deploy the application:
 
-1. Use the [Cloud Developer Console](console.developer.google.com)  to create a project/app id. (App id and project id are identical)
+1. Use the [Cloud Developer Console](https://console.developer.google.com)  to create a project/app id. (App id and project id are identical)
 1. Use the [Admin Console](https://appengine.google.com) to view data, queues, and other AppEngine specific administration tasks.
 1. [Deploy the
    application](https://cloud.google.com/appengine/docs/python/tools/uploadinganapp) with
