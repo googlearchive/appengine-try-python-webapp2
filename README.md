@@ -31,7 +31,7 @@ for options when running dev_appserver.
 ## Deploy
 To deploy the application:
 
-1. Use the Cloud Developer Console (console.developer.google.com)  to create a project/app id. (App id and project id are identical)
+1. Use the [Cloud Developer Console](console.developer.google.com)  to create a project/app id. (App id and project id are identical)
 1. Use the [Admin Console](https://appengine.google.com) to view data, queues, and other AppEngine specific administration tasks.
 1. [Deploy the
    application](https://cloud.google.com/appengine/docs/python/tools/uploadinganapp) with
@@ -39,6 +39,8 @@ To deploy the application:
    ```
    appcfg.py -A <your-project-id> --oauth2 update .
    ```
+
+   Or on supported platforms, use the GoogleAppEngineLauncher GUI tool to deploy your app.
 1. Congratulations!  Your application is now live at your-app-id.appspot.com
 
 ### Data Persistance Options
@@ -69,4 +71,4 @@ See [CONTRIBUTING.md](CONTRIBUTING.md)
 See [LICENSE](LICENSE)
 
 ## Author
-Bill Prin, Takashi Matsuo
+Bill Prin, Takashi Matsuo, Jon Parrot
