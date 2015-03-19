@@ -10,14 +10,18 @@ scaffolding for other python frameworks and use cases.
 ## Run Locally
 1. Install the [App Engine Python SDK](https://cloud.google.com/appengine/downloads).
 See the README file for directions. You'll need python 2.7 and [pip 1.4 or later](http://www.pip-installer.org/en/latest/installing.html) installed too.
-
-2. Clone this repo with
+1. Clone this repo with
 
    ```
    git clone https://github.com/GoogleCloudPlatform/appengine-python-webapp2-skeleton.git
    ```
+1. Install dependencies in the project's lib directory.
+   Note: App Engine can only import libraries from inside your project directory.
 
-3. Run this project locally from the command line:
+   ```
+   cd appengine-try-python-webapp2
+   pip install -r requirements.txt -t lib
+1. Run this project locally from the command line:
 
    ```
    dev_appserver.py .
