@@ -21,6 +21,7 @@ See the README file for directions. You'll need python 2.7 and [pip 1.4 or later
    ```
    cd appengine-try-python-webapp2
    pip install -r requirements.txt -t lib
+   ```
 1. Run this project locally from the command line:
 
    ```
