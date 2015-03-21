@@ -14,5 +14,5 @@ before_install:
         - ./install_gcloud.sh
 
 script:
-        - $GCLOUD/gcloud preview app deploy .
+        - printf 'y\n' | $GCLOUD/gcloud preview app deploy .
         - python test.py
