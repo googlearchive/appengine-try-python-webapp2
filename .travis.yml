@@ -10,9 +10,5 @@ env:
         - GCLOUD=$HOME/gcloud/google-cloud-sdk/bin CLOUDSDK_PYTHON_SITEPACKAGES=1 GOOGLE_APPLICATION_CREDENTIALS=$TRAVIS_BUILD_DIR/credentials.json
 
 
-before_install:
-        - openssl aes-256-cbc -K $encrypted_9a4798c88375_key -iv $encrypted_9a4798c88375_iv ≤-in client_secret.json.enc -out client_secret.json -d
-        - ./install_gcloud.sh
-
 script:
         - python test.py
