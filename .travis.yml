@@ -15,7 +15,8 @@ before_install:
 
 install:
         - printf 'y\n' | $GCLOUD/gcloud components update app
-        
+        - gcloud config set project hello-webapp2-app-enigine
+
 script:
         - $GCLOUD/gcloud preview app deploy .
         - python test.py
