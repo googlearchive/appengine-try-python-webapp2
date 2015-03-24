@@ -45,10 +45,20 @@ To deploy the application:
    appcfg.py -A <your-project-id> --oauth2 update .
    ```
 
-   Or on supported platforms, use the GoogleAppEngineLauncher GUI tool to deploy your app.
+   OR
+   Use the google [gcloud CLI](https://cloud.google.com/sdk/gcloud/) to deploy your app:
+   ```
+   gcloud auth login # only necesssary once
+   gcloud config set project <your-project-id> # only necessary once
+   gcloud preview app deploy .
+   ```
+
+
+
+   OR on supported platforms, use the GoogleAppEngineLauncher GUI tool to deploy your app.
 1. Congratulations!  Your application is now live at your-app-id.appspot.com
 
-### Data Persistance Options
+### Data Persistence Options
 To add persistence to your models, use
 [NDB](https://cloud.google.com/appengine/docs/python/ndb/) for
 scale.  Consider
