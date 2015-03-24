@@ -7,7 +7,7 @@ cache:
                 - $HOME/gcloud/
 
 env:
-        - GCLOUD=$HOME/gcloud/google-cloud-sdk/bin CLOUDSDK_PYTHON_SITEPACKAGES=1 GOOGLE_APPLICATION_CREDENTIALS=$TRAVIS_BUILD_DIR/credentials.json
+        - GCLOUD=$HOME/gcloud/google-cloud-sdk/bin CLOUDSDK_PYTHON_SITEPACKAGES=1 GOOGLE_APPLICATION_CREDENTIALS=$TRAVIS_BUILD_DIR/client_secret.json
 
 before_install:
         - openssl aes-256-cbc -K $encrypted_cf36da7dba4f_key -iv $encrypted_cf36da7dba4f_iv -in client_secret.json.enc -out client_secret.json -d
@@ -16,6 +16,7 @@ before_install:
 install:
         - printf 'y\n' | $GCLOUD/gcloud components update app
         - $GCLOUD/gcloud config set project hello-webapp2-app-enigine
+        - $GCLOUD/gcloud auth activate-service-account --key client_secret.json
 
 script:
         - $GCLOUD/gcloud preview app deploy .
